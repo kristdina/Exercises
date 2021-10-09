@@ -18,7 +18,16 @@ namespace Exercises.Level1
         /// </summary>
         public bool FirstLast6(int[] nums)
         {
-            throw new NotImplementedException();
+            int first = nums[0];
+
+            int lastIndex = nums.Length - 1;
+            int last = nums[lastIndex];
+
+            if (first == 6 || last == 6)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -31,7 +40,19 @@ namespace Exercises.Level1
         /// </summary>
         public bool SameFirstLast(int[] nums)
         {
-            throw new NotImplementedException();
+            if (nums.Length == 0)
+            {
+                return false;
+            }
+            int first = nums[0];
+            int lastIndex = nums.Length - 1;
+            int last = nums[lastIndex];
+
+            if (nums.Length > 0 && first == last)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -41,7 +62,12 @@ namespace Exercises.Level1
         /// </summary>
         public int[] MakePi()
         {
-            throw new NotImplementedException();
+            int[] array = new int[3];
+            array[0] = 3;
+            array[1] = 1;
+            array[2] = 4;
+
+            return array;
         }
 
         /// <summary>
@@ -54,7 +80,16 @@ namespace Exercises.Level1
         /// </summary>
         public bool CommonEnd(int[] a, int[] b)
         {
-            throw new NotImplementedException();
+            int firstA = a[0];
+            int firstB = b[0];
+            int lastA = a[^1];
+            int lastB = b[^1];
+
+            if (firstA == firstB || lastA == lastB)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -66,7 +101,7 @@ namespace Exercises.Level1
         /// </summary>
         public int Sum3(int[] nums)
         {
-            throw new NotImplementedException();
+            return nums[0] + nums[1] + nums[2];
         }
 
         /// <summary>
@@ -79,7 +114,12 @@ namespace Exercises.Level1
         /// </summary>
         public int[] RotateLeft3(int[] nums)
         {
-            throw new NotImplementedException();
+            return new int[] 
+            { 
+                nums[1], 
+                nums[2], 
+                nums[0] 
+            };
         }
 
         /// <summary>

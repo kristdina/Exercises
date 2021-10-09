@@ -17,7 +17,13 @@ namespace Exercises.Level1
         /// </summary>
         public int CountEvens(int[] nums)
         {
-            throw new NotImplementedException();
+            int even = 0;
+            for (int count=0; count < nums.Length; count++)
+            {
+                if (nums[count] % 2 == 0)
+                    even++;
+            }
+            return even;
         }
 
         /// <summary>
@@ -47,7 +53,22 @@ namespace Exercises.Level1
         /// </summary>
         public int CenteredAverage(int[] nums)
         {
-            throw new NotImplementedException();
+            int sum = 0;
+            int largest = nums[0];
+            int smallest = nums[0];
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                smallest = Math.Min(smallest, nums[i]);
+                largest = Math.Max(largest, nums[i]);
+
+                sum = sum + nums[i];
+            }
+            sum = sum - largest;
+            sum = sum - smallest;
+
+            return sum / (nums.Length - 2);
+
         }
 
         /// <summary>
