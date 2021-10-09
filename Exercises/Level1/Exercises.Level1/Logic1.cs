@@ -93,7 +93,19 @@ namespace Exercises.Level1
         /// </summary>
         public int CaughtSpeeding(int speed, bool isBirthday)
         {
-            throw new NotImplementedException();
+            if (!(isBirthday))
+            {
+                if (speed <= 60)
+                    return 0;
+                if (speed > 60 && speed <= 80)
+                    return 1;
+                else
+                    return 2;
+            }
+            else if (speed > 65 && speed <= 85)
+                return 1;
+            else
+                return 2;
         }
 
         /// <summary>
@@ -136,7 +148,11 @@ namespace Exercises.Level1
         /// </summary>
         public bool Love6(int a, int b)
         {
-            throw new NotImplementedException();
+            if (a == 6 || b == 6 || a - b == 6 || b - a == 6 || a + b == 6);
+            {
+                return true;
+            }
+            return false; 
         }
 
         /// <summary>
@@ -150,8 +166,27 @@ namespace Exercises.Level1
         /// </summary>
         public bool In1To10(int n, bool outsideMode)
         {
-            throw new NotImplementedException();
+            if (outsideMode)
+            {
+                if (n <= 10 && n >= 1)
+                {
+                    return true;
+                }
+                return false;
+            }
+
+            else
+            {
+                if (n < 1 || n >= 10)
+                {
+                    return true;
+                }
+                return false;
+            }
         }
+
+
+
 
         /// <summary>
         /// We'll say a number is special if it is a multiple of 11 or if it is one more than a multiple of
